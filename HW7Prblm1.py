@@ -39,7 +39,6 @@ def c_scan(start, end, disk_locations):
         return
     else:
         total = abs(start-end)
-        print(total)
         temp_list = []
         for res in disk_locations:
             if res < start:
@@ -86,6 +85,7 @@ def c_look(start, end, disk_locations):
             total = abs(start - max(disk_locations))
             res = next(x for x, val in enumerate(disk_locations) if val < start)
             total += abs(disk_locations[res] - min(disk_locations))
+            print(total)
     else:
         print("Empty list, no values to calculate")
 
